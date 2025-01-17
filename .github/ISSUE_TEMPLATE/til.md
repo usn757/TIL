@@ -1,13 +1,15 @@
 ---
-name: TIL Template
-about: 처음 쓰는 템플릿
-title: TIL - 2025-00-00
+name: TIL
+about: Describe this issue template's purpose here.
+title: "[제목] 날짜"
 labels: bug
 assignees: ''
 
 ---
 
-## 오늘의 학습
+# TIL - 2025-00-00
+
+## Today I learn
 - [ ] 주요 학습 내용 1
 - [ ] 주요 학습 내용 2
 
