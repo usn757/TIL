@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- og tag -->
+    <meta property="og:title" content="Charles Darwin" />
+    <meta
+      property="og:description"
+      content="This photo may not be related to the text haha"
+    />
+    <meta
+      property="og:image"
+      content="https://github.com/TestSetupMyOrganizationByUSN/study/blob/main/day/5/charles_darwin/proglang.jpg?raw=true"
+    />
+
+    <title>Charles Darwin</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="bg-light text-center py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Charles Darwin</h1>
+            <p class="lead">
+              The man who revolutionized our understanding of the natural world
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Charles_Darwin_seated_crop.jpg/640px-Charles_Darwin_seated_crop.jpg"
+            alt="Charles Darwin"
+            class="img-fluid"
+          />
+        </div>
+        <div class="col-md-6">
+          <h2>About Darwin</h2>
+          <p>
+            Charles Robert Darwin (12 February 1809 – 19 April 1882) was an
+            English naturalist, geologist, and biologist, best known for his
+            contributions to the science of evolution.
+          </p>
+          <p>
+            His groundbreaking work, "On the Origin of Species," established the
+            theory of evolution by natural selection, profoundly impacting the
+            scientific community and the world at large.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="bg-light py-5 mt-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Key Moments in Darwin's Life</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">1809</h5>
+                <p class="card-text">
+                  Born in Shrewsbury, Shropshire, England.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">1831-1836</h5>
+                <p class="card-text">
+                  Embarked on a five-year voyage on the HMS Beagle, making
+                  significant observations that would later inform his theory of
+                  evolution.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">1859</h5>
+                <p class="card-text">
+                  Published "On the Origin of Species," presenting his theory of
+                  evolution by natural selection.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section class="container mt-5">
+      <h2 class="text-center mb-5">Major Publications</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card mb-4">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Origin_of_Species_title_page.jpg/220px-Origin_of_Species_title_page.jpg"
+              class="card-img-top"
+              alt="On the Origin of Species"
+            />
+            <div class="card-body">
+              <h5 class="card-title">On the Origin of Species</h5>
+              <p class="card-text">
+                Darwin's seminal work outlining the theory of evolution by
+                natural selection.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card mb-4">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Darwin_-_Descent_of_Man_%281871%29.jpg/320px-Darwin_-_Descent_of_Man_%281871%29.jpg"
+              class="card-img-top"
+              alt="The Descent of Man"
+            />
+            <div class="card-body">
+              <h5 class="card-title">The Descent of Man</h5>
+              <p class="card-text">
+                Darwin's exploration of human evolution and sexual selection.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-light text-center py-5 mt-5">
+      <div class="container">
+        <h2>Learn More About Darwin</h2>
+        <p>
+          Explore the life, work, and legacy of Charles Darwin through his
+          writings and the many resources available online.
+        </p>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#darwinModal"
+        >
+          Learn More
+        </button>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="darwinModal"
+      tabindex="-1"
+      aria-labelledby="darwinModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="darwinModalLabel">More About Darwin</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Darwin's work had a profound impact on the scientific community
+              and the general public. His theory of evolution by natural
+              selection revolutionized our understanding of the biological
+              world.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Trigger -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+      <button type="button" class="btn btn-info" id="toastBtn">
+        Show Toast
+      </button>
+    </div>
+
+    <!-- Toast -->
+    <div
+      id="darwinToast"
+      class="toast hide"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+    >
+      <div class="toast-header">
+        <strong class="me-auto">Charles Darwin</strong>
+        <small>Just now</small>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="toast-body">
+        Did you know? Darwin's "On the Origin of Species" was an instant
+        bestseller!
+      </div>
+    </div>
+
+    <!-- Spinner -->
+    <div class="d-flex justify-content-center mt-5">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
