@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM 2</title>
+  </head>
+  <body>
+    <button onclick="onButtonClick()">Click Me</button>
+
+    <script>
+      function onButtonClick() {
+        alert("Button clicked!");
+      }
+    </script>
+
+    <div>
+      <button onclick="addItem()">Add Item</button>
+      <button onclick="removeItem()">Remove Item</button>
+      <button onclick="resetItems()">Reset</button>
+    </div>
+
+    <style>
+      #container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+      }
+      #container > div {
+        display: flex;
+        background-color: beige;
+        border-radius: 100%;
+        border: 1px solid black;
+        width: 120px;
+        height: 120px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+    </style>
+
+    <div id="container"></div>
+    <script>
+      let elementCounter = 0;
+      function addItem() {
+        const container = document.querySelector("#container");
+        const innerElement = document.createElement("div");
+        innerElement.textContent = "Item";
+        const outerElement = document.createElement("div");
+
+        innerElement.id = `innerElement-${elementCounter}`;
+        outerElement.id = `outerElement-${elementCounter}`;
+        elementCounter++;
+
+        outerElement.classList.add("item");
+        innerElement.classList.add("textItem");
+        outerElement.appendChild(innerElement);
+        container.appendChild(outerElement);
+      }
+
+      function removeItem() {
+        try {
+          container.removeChild(container.lastElementChild);
+        } catch {
+          alert("No more items!");
+        }
+      }
+
+      function resetItems() {
+        container.innerHTML = "";
+      }
+    </script>
+  </body>
+</html>
