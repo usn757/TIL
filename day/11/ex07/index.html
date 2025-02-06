@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tournament</title>
+    <style>
+      #container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 50px;
+      }
+      div > img {
+        width: 240px;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+      div > img:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <h2 id="result" style="text-align: center; margin-top: 20px"></h2>
+
+    <script>
+      let items = ["1", "2", "3", "4"]; // 실제 시나리오에서는 적절한 이미지 이름으로 교체
+      let randomizedItems = [...items].sort(() => Math.random() - 0.5);
+      const container = document.querySelector("#container");
+      const resultText = document.querySelector("#result");
+
+      function displayMatch() {
+        container.innerHTML = "";
+
+        if (randomizedItems.length === 1) {
+          resultText.textContent = `Winner: ${randomizedItems[0]}`;
+          return;
+        }
+
+        const item1 = randomizedItems.pop();
+        const item2 = randomizedItems.pop();
+
+        const image1 = document.createElement("img");
+        image1.src = item1 + ".jpg";
+        image1.addEventListener("click", () => {
+          randomizedItems.unshift(item1);
+          nextRound();
+        });
+
+        const image2 = document.createElement("img");
+        image2.src = item2 + ".jpg";
+        image2.addEventListener("click", () => {
+          randomizedItems.unshift(item2);
+          nextRound();
+        });
+
+        container.appendChild(image1);
+        container.appendChild(image2);
+      }
+
+      function nextRound() {
+        setTimeout(displayMatch, 300);
+      }
+
+      displayMatch();
+    </script>
+  </body>
+</html>

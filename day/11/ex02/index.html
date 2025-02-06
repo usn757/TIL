@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <div class="container">
+      <ul>
+        <li id="item1">Item 1</li>
+        <li id="item2">Item 2</li>
+        <li id="item3"><strong>Item 3</strong></li>
+        <li id="item4">Item 4</li>
+        <li id="item5">Item 5</li>
+      </ul>
+      <ol>
+        <li class="item" id="element1">Element 1</li>
+        <li class="item" id="element2">Element 2</li>
+        <li class="item" id="element3">Element 3</li>
+        <li id="element4">Element 4</li>
+        <li id="element5">Element 5</li>
+      </ol>
+    </div>
+    <script>
+      const listItem3 = document.getElementById("item3");
+      console.log(listItem3.innerHTML);
+      console.log(listItem3.innerText);
+      listItem3.innerHTML = "<strong>Changed Item 3</strong>";
+      console.log(listItem3.innerHTML);
+      console.log(listItem3.innerText);
+
+      const listItem4 = document.getElementById("item4");
+      listItem4.innerText = "<strong>Changed Item 4</strong>";
+      console.log(listItem4.innerHTML);
+      console.log(listItem4.innerText);
+
+      const element1 = document.querySelector("#element3");
+      console.log(element1);
+
+      const element2 = document.querySelectorAll("#element3");
+      console.log(element2);
+
+      const element3 = document.querySelector(".item");
+      console.log(element3.innerText);
+
+      const element4 = document.querySelectorAll(".item");
+      console.log(element4.innerText);
+      console.log(Array.from(element4).map((el) => el.innerText));
+
+      const element5 = document.querySelectorAll("li");
+      console.log([...element5].map((el) => el.innerText.toUpperCase()));
+    </script>
+  </body>
+</html>
