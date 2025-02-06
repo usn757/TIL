@@ -160,7 +160,6 @@ footer {
   }
 }
 
-/* 기존 스타일 유지하면서 추가 */
 :root {
   --primary-color: #2c3e50;
   --secondary-color: #2980b9;
@@ -292,4 +291,63 @@ footer {
   .stats-container {
     flex-direction: column;
   }
+}
+
+.section-content {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.reflection {
+  border-left: 4px solid #ffd700;
+}
+
+.trouble-shooting details {
+  margin: 10px 0;
+}
+
+.trouble-shooting summary {
+  cursor: pointer;
+  color: #e74c3c;
+  font-weight: 500;
+}
+
+.trouble-shooting details[open] summary {
+  margin-bottom: 10px;
+}
+
+.next-plan {
+  border-left: 4px solid #2ecc71;
+}
+
+.references ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.references li {
+  margin: 5px 0;
+}
+
+/* 확장된 태그 스타일 */
+.tag.difficulty-easy {
+  background-color: #d5f5e3;
+  color: #27ae60;
+}
+
+.tag.difficulty-medium {
+  background-color: #fdebd0;
+  color: #f39c12;
+}
+
+.tag.difficulty-hard {
+  background-color: #fadbd8;
+  color: #c0392b;
+}
+
+.tag[class*="time-"] {
+  background-color: #ebf5fb;
+  color: #2980b9;
 }
