@@ -11,77 +11,90 @@
       <div class="container">
         <h1>웹 개발 학습 기록</h1>
         <p>매일 배운 내용과 만든 웹페이지 링크를 기록합니다.</p>
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="학습 내용 검색..." />
+          <select id="monthFilter">
+            <option value="">전체 기간</option>
+            <option value="2025-02">2025년 2월</option>
+            <option value="2025-01">2025년 1월</option>
+          </select>
+        </div>
       </div>
     </header>
 
     <main>
       <div class="container">
+        <div class="stats-container">
+          <div class="stat-card">
+            <h3>총 학습 일수</h3>
+            <p id="totalDays">13일</p>
+          </div>
+          <div class="stat-card">
+            <h3>이번 달 학습 일수</h3>
+            <p id="monthDays">3일</p>
+          </div>
+        </div>
 
-        <!-- 250204 -->
-        <section class="card sticker">
-          <h2>2025년 2월 4일 Day11</h2>
-          <p><strong>배운 내용:</strong> test</p>
-          <p>
-            <strong>만든 웹페이지:</strong>
-            <a href="" target="_blank">test</a>
-          </p>
-        </section>
-        <!-- 250103 -->
-        <section class="card sticker">
-          <h2>2025년 2월 3일 Day10</h2>
-          <p><strong>배운 내용:</strong> test</p>
-          <p>
-            <strong>만든 웹페이지:</strong>
-            <a href="" target="_blank">test</a>
-          </p>
-        </section>
-
-        <!-- 250123 -->
-        <section class="card sticker">
-          <h2>2025년 1월 23일 Day6</h2>
-          <p><strong>배운 내용:</strong> test</p>
-          <p>
-            <strong>만든 웹페이지:</strong>
-            <a href="" target="_blank">test</a>
-          </p>
-        </section>
-          
-          <!-- 2501222 -->
-        <section class="card sticker">
-          <h2>2025년 1월 22일 Day5</h2>
-          <p>
-            <strong>배운 내용:</strong> 
-              <ul class="learncontents">
-                <li>ChatGPT의 대안들</li>
-                <li>git branch, switch, merge?????</li>
+        <div id="til-container">
+          <!-- Day 13 -->
+          <section class="card sticker" data-date="2025-02-06">
+            <div class="card-header">
+              <h2>Day 13</h2>
+              <time datetime="2025-02-06">2025년 2월 6일</time>
+            </div>
+            <div class="card-content">
+              <h3>📚 학습 내용</h3>
+              <ul class="learn-contents">
+                <li>
+                  <a href="day/13/i18n.md" target="_blank">
+                    i18n (Internationalization)
+                    <span class="link-icon">↗</span>
+                  </a>
+                </li>
               </ul>
-          </p>
-          <p>
-            <strong>만든 웹페이지:</strong>
-            <a href="day/05/charles_darwin/index.html" target="_blank"
-              >프롬프트 활용 웹페이지</a
-            >
-          </p>
-        </section>
+            </div>
+            <div class="card-tags">
+              <span class="tag">i18n</span>
+              <span class="tag">web</span>
+            </div>
+          </section>
 
-        <!-- 250121 -->
-        <section class="card sticker">
-          <h2>2025년 1월 21일</h2>
-          <p><strong>배운 내용:</strong> test</p>
-          <p>
-            <strong>만든 웹페이지:</strong>
-            <a href="https://example.com" target="_blank">test</a>
-          </p>
-        </section>
-
-        <!-- 추가 섹션을 여기에 추가할 수 있습니다. -->
+          <!-- Day 5 -->
+          <section class="card sticker" data-date="2025-01-22">
+            <div class="card-header">
+              <h2>Day 5</h2>
+              <time datetime="2025-01-22">2025년 1월 22일</time>
+            </div>
+            <div class="card-content">
+              <h3>📚 학습 내용</h3>
+              <ul class="learn-contents">
+                <li>ChatGPT의 대안들</li>
+                <li>Git 브랜치 관리 (branch, switch, merge)</li>
+              </ul>
+              <h3>🔗 실습 결과물</h3>
+              <a href="day/05/charles_darwin/index.html" target="_blank">
+                프롬프트 활용 웹페이지
+                <span class="link-icon">↗</span>
+              </a>
+            </div>
+            <div class="card-tags">
+              <span class="tag">AI</span>
+              <span class="tag">git</span>
+              <span class="tag">web</span>
+            </div>
+          </section>
+        </div>
       </div>
     </main>
 
     <footer>
       <div class="container">
-        <p>&copy; 조금씩 수정될 가능성이 존재함</p>
+        <p>
+          &copy; 2025 웹 개발 학습 기록 | 마지막 수정:
+          <time id="lastModified"></time>
+        </p>
       </div>
     </footer>
+    <script src="app.js"></script>
   </body>
 </html>
