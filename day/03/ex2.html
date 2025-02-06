@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex2</title>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="styles2.css" />
+  </head>
+  <body>
+    <ul>
+      <li id="special">파스타</li>
+      <li class="한식">돼지국밥</li>
+      <li id="special" class="한식">제육볶음</li>
+      <li class="diet">샐러드</li>
+      <li class="양식">피자</li>
+      <li>취두부</li>
+    </ul>
+
+    <div style="width: 120px; height: 120px; background-color: lime">
+      <div style="width: 40px; height: 40px; background-color: brown"></div>
+      <div style="width: 33%; height: 33%; background-color: black"></div>
+    </div>
+
+    <!-- em은 폰트 사이즈에 영향받는다 -->
+    <div>
+      <div style="width: 20em; height: 20em; background-color: aqua">
+        <div
+          style="
+            font-size: 7px;
+            width: 10em;
+            height: 10em;
+            background-color: blue;
+          "
+        ></div>
+      </div>
+    </div>
+    <!-- rem은 안받네 -->
+    <div>
+      <div style="width: 20rem; height: 20rem; background-color: cadetblue">
+        <div
+          style="
+            font-size: 7px;
+            width: 10rem;
+            height: 10rem;
+            background-color: blue;
+          "
+        ></div>
+      </div>
+    </div>
+
+    <!-- 뷰포트 -->
+    <div style="width: 50vw; background-color: chocolate">브라우저 50%</div>
+  </body>
+</html>

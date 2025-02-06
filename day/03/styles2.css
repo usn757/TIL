@@ -1,0 +1,23 @@
+ul li {
+  color: blueviolet;
+}
+
+.한식 {
+  color: darkred;
+  font-size: 15pt;
+  text-decoration: underline;
+}
+
+.diet {
+  font-size: 10pt;
+  color: green;
+}
+
+#special {
+  background-color: aquamarine;
+}
+
+* {
+  /* box model 과 같이 생각하는게 좋다 */
+  text-align: center;
+}

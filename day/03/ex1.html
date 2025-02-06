@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex1</title>
+
+    <style>
+      li {
+        color: orange;
+        font-size: 15px;
+      }
+      ol li {
+        color: green;
+      }
+      ol li {
+        color: blue;
+      }
+      /* 우선순위 orange vs green vs blue => blue 승리 */
+    </style>
+  </head>
+  <body>
+    <div style="color: brown">
+      div : division 영역 나누기
+      <p style="color: orange; font-size: 24pt">
+        <span>상속으로 인해 span에 p color 적용됨</span>
+      </p>
+      <p style="color: red">김치찌개를 저녁으로</p>
+      <p>다시 div color</p>
+    </div>
+
+    <!-- 젠코딩은 HTML 코딩의 생산성을 향상시켜주는 도구, 이젠 emmet으로 변경? 
+      ul>li{점심식사}*3^ol>li{저녁식사}*3+p{디저트} -->
+    <ul>
+      <li>점심식사</li>
+      <li>점심식사</li>
+      <li>점심식사</li>
+    </ul>
+    <ol>
+      <li>저녁식사</li>
+      <li>저녁식사</li>
+      <li>저녁식사</li>
+      <p>디저트</p>
+    </ol>
+  </body>
+</html>
