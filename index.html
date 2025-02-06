@@ -7,24 +7,46 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- 헤더 부분 동일 -->
+    <header>
+      <div class="container">
+        <h1>웹 개발 학습 기록</h1>
+        <p>매일 배운 내용과 만든 웹페이지 링크를 기록합니다.</p>
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="학습 내용 검색..." />
+          <select id="monthFilter">
+            <option value="">전체 기간</option>
+            <option value="2025-02">2025년 2월</option>
+            <option value="2025-01">2025년 1월</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
     <main>
       <div class="container">
-        <!-- 통계 부분 동일 -->
+        <div class="stats-container">
+          <div class="stat-card">
+            <h3>총 학습 일수</h3>
+            <p id="totalDays">13일</p>
+          </div>
+          <div class="stat-card">
+            <h3>이번 달 학습 일수</h3>
+            <p id="monthDays">3일</p>
+          </div>
+        </div>
+
         <div id="til-container">
+          <!-- 250206 -->
           <section class="card sticker" data-date="2025-02-06">
             <div class="card-header">
               <h2>Day 13</h2>
               <time datetime="2025-02-06">2025년 2월 6일</time>
             </div>
             <div class="card-content">
-              <h3>📚 오늘의 학습 목표</h3>
+              <!-- <h3>📚 오늘의 학습 목표</h3>
               <div class="section-content">
-                <p>
-                  웹사이트 국제화(i18n) 기초 개념 이해하고 간단한 예제
-                  만들어보기
-                </p>
-              </div>
+                <p>웹사이트 국제화(i18n) 개념 이해하기</p>
+              </div> -->
 
               <h3>📖 배운 내용</h3>
               <ul class="learn-contents">
@@ -36,10 +58,40 @@
                 </li>
               </ul>
 
+              <h3>🤔 느낀점</h3>
+              <div class="section-content reflection">
+                <p>표준화 방식이구나 까지만 이해, 필요할때 참고할 예정</p>
+              </div>
+            </div>
+            <div class="card-tags">
+              <span class="tag">i18n</span>
+              <span class="tag">web</span>
+              <!-- <span class="tag difficulty-medium">난이도: 중</span> -->
+            </div>
+          </section>
+
+          <!-- 250122 -->
+          <section class="card sticker" data-date="2025-01-22">
+            <div class="card-header">
+              <h2>Day 5</h2>
+              <time datetime="2025-01-22">2025년 1월 22일</time>
+            </div>
+            <div class="card-content">
+              <h3>📚 오늘의 학습 목표</h3>
+              <div class="section-content">
+                <p>AI 도구를 활용한 웹 개발 프로세스 이해하기</p>
+              </div>
+
+              <h3>📖 배운 내용</h3>
+              <ul class="learn-contents">
+                <li>ChatGPT의 대안들</li>
+                <li>Git 브랜치 관리 (branch, switch, merge)</li>
+              </ul>
+
               <h3>💻 실습 결과물</h3>
               <div class="section-content">
-                <a href="projects/i18n-example" target="_blank">
-                  다국어 지원 웹페이지 예제
+                <a href="day/05/charles_darwin/index.html" target="_blank">
+                  프롬프트 활용 웹페이지
                   <span class="link-icon">↗</span>
                 </a>
               </div>
@@ -47,46 +99,138 @@
               <h3>🤔 느낀점</h3>
               <div class="section-content reflection">
                 <p>
-                  i18n 적용이 생각보다 복잡하지만, 처음부터 고려하면 나중에
-                  수정하는 것보다 효율적일 것 같다.
+                  AI 도구를 활용하면 개발 속도를 높일 수 있지만, 결과물을
+                  검증하는 과정이 중요하다는 것을 배웠다.
                 </p>
               </div>
 
               <h3>❗ 트러블 슈팅</h3>
               <div class="section-content trouble-shooting">
                 <details>
-                  <summary>한글 폰트 깨짐 현상</summary>
-                  <p>원인: 폰트 설정에서 한글 폰트 미지정</p>
-                  <p>해결: font-family에 'Noto Sans KR' 추가</p>
+                  <summary>Git merge 충돌 해결</summary>
+                  <p>원인: 동일 파일 다른 브랜치에서 수정</p>
+                  <p>해결: VSCode의 충돌 해결 도구 활용</p>
                 </details>
-              </div>
-
-              <h3>📌 다음 학습 계획</h3>
-              <div class="section-content next-plan">
-                <ul>
-                  <li>i18n 라이브러리 실제 프로젝트에 적용해보기</li>
-                  <li>다국어 리소스 관리 방법 학습</li>
-                </ul>
-              </div>
-
-              <h3>📚 참고 자료</h3>
-              <div class="section-content references">
-                <ul>
-                  <li><a href="#">MDN i18n 가이드</a></li>
-                  <li><a href="#">i18next 공식 문서</a></li>
-                </ul>
               </div>
             </div>
             <div class="card-tags">
-              <span class="tag">i18n</span>
+              <span class="tag">AI</span>
+              <span class="tag">git</span>
               <span class="tag">web</span>
-              <span class="tag difficulty-medium">난이도: 중</span>
-              <span class="tag time-3h">소요시간: 3h</span>
+            </div>
+          </section>
+
+          <!-- 250116-->
+          <!-- Day 01 -->
+          <section class="card sticker" data-date="2025-01-16">
+            <div class="card-header">
+              <h2>Day 01</h2>
+              <time datetime="2025-01-16">2025년 1월 16일</time>
+            </div>
+            <div class="card-content">
+              <h3>📚 오늘의 학습 목표</h3>
+              <div class="section-content">
+                <p>Markdown 이해, ChatGPT 이해, 웹 개발 기초</p>
+              </div>
+
+              <h3>📖 배운 내용</h3>
+              <ul class="learn-contents">
+                <li>
+                  Markdown 문법 (헤딩, 굵게, 기울임꼴, 목록, 링크, 이미지, 코드
+                  블록, 테이블)
+                </li>
+                <li>
+                  ChatGPT: OpenAI의 대화형 AI 모델, GPT 아키텍처 기반, 자연어
+                  처리 기술 사용, 다양한 작업에 활용 가능
+                </li>
+                <li>
+                  웹 개발 기초: HTML 구조, CSS 스타일링 (Tailwind CSS), 웹 개발
+                  개념
+                </li>
+              </ul>
+
+              <h3>💻 실습 결과물</h3>
+              <div class="section-content">
+                <a href="day\01\developer_intro\index.html" target="_blank">
+                  개발자 소개 웹페이지
+                  <span class="link-icon">↗</span>
+                </a>
+              </div>
+
+              <h3>🤔 느낀점</h3>
+              <div class="section-content reflection">
+                <p>
+                  Markdown, ChatGPT, 그리고 기본적인 웹 개발 개념들을 가볍게
+                  처음 건드렸다. 재밌다.
+                </p>
+              </div>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Markdown</span>
+              <span class="tag">ChatGPT</span>
+              <span class="tag">Web Development</span>
+              <span class="tag">HTML</span>
+              <span class="tag difficulty-easy">난이도: 하</span>
+            </div>
+          </section>
+
+          <!-- sample -->
+          <section class="card sticker" data-date="2025-01-01">
+            <div class="card-header">
+              <h2>Day 0</h2>
+              <time datetime="2025-01-22">2025년 1월 22일</time>
+            </div>
+            <div class="card-content">
+              <h3>📚 오늘의 학습 목표</h3>
+              <div class="section-content">
+                <p>Sample</p>
+              </div>
+
+              <h3>📖 배운 내용</h3>
+              <ul class="learn-contents">
+                <li>내용1</li>
+                <li>내용2</li>
+              </ul>
+
+              <h3>💻 실습 결과물</h3>
+              <div class="section-content">
+                <a href="" target="_blank">
+                  웹페이지1
+                  <span class="link-icon">↗</span>
+                </a>
+              </div>
+
+              <h3>🤔 느낀점</h3>
+              <div class="section-content reflection">
+                <p>와 신기하다</p>
+              </div>
+
+              <h3>❗ 트러블 슈팅</h3>
+              <div class="section-content trouble-shooting">
+                <details>
+                  <summary>트러블 슈팅 해결</summary>
+                  <p>원인: (원인)</p>
+                  <p>해결: (해결)</p>
+                </details>
+              </div>
+            </div>
+            <div class="card-tags">
+              <span class="tag">Sample</span>
+              <span class="tag difficulty-easy">난이도: 하</span>
             </div>
           </section>
         </div>
       </div>
     </main>
-    <!-- 푸터 부분 동일 -->
+
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2025 웹 개발 학습 기록 | 마지막 수정:
+          <time id="lastModified"></time>
+        </p>
+      </div>
+    </footer>
+    <script src="app.js"></script>
   </body>
 </html>
