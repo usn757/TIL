@@ -241,11 +241,11 @@ footer {
 }
 
 .learn-contents {
-  list-style-type: none;
   margin-left: 0;
 }
 
 .learn-contents li {
+  list-style-type: none;
   margin: 8px 0;
   padding-left: 20px;
   position: relative;
