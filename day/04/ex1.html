@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex01</title>
+
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        border: 5px solid lime;
+        margin: 30px;
+      }
+
+      #static {
+        position: static;
+        top: 110px;
+        /* 무변 */
+      }
+      #relative {
+        position: relative;
+
+        /* top: 10px */
+        top: -10px; /* left,right,bottom,top */
+      }
+
+      .relative {
+        background-color: orange;
+        position: relative;
+        top: 30px;
+        right: -30px;
+      }
+      .absolute {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        border-color: red;
+        background-color: yellow;
+      }
+
+      .fixed {
+        position: fixed;
+        top: 30px;
+        left: 30px;
+        background-color: aquamarine;
+      }
+
+      .sticky {
+        position: sticky;
+        top: 20px;
+        background-color: #98bfeb;
+        border-color: black;
+        z-index: 999;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sticky">스티키</div>
+
+    <div id="static">
+      id스태틱 (static)
+      <div class="absolute">앱솔!</div>
+    </div>
+    <div id="relative">id릴레이티비 (relative)</div>
+
+    <div class="absolute">앱솔!</div>
+
+    <div class="relative">
+      first rel div
+      <div>second div</div>
+      <div class="relative">릴레</div>
+      <div class="absolute">앱솔!!</div>
+    </div>
+
+    <div class="absolute">앱솔!!!</div>
+    <div class="fixed">픽스드</div>
+  </body>
+</html>
+
+<!-- relative - top 으로 위치 변화 margin뚫고 올라감 -->
+<!-- absolute 들의 위치를 주목 -->
+<!-- z-index 화면에 보이는 우선순위? 높이? -->
+
+<!-- static, relative, absolute, fixed, sticky -->

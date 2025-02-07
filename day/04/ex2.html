@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex02 Flex (box)</title>
+
+    <style>
+      img {
+        width: 300px;
+      }
+      .flex-container {
+        display: flex;
+        margin: 5px;
+      }
+      .flex-item {
+        /* 이건 flex기능이 아니라 시각적 표현 */
+        background-color: yellow;
+        border: 2px solid black;
+        width: 100px;
+        height: 100px;
+      }
+
+      /* .row, .reverse {}  가능 */
+
+      .row {
+        flex-direction: row;
+      }
+      .column {
+        flex-direction: column;
+      }
+
+      .row.reverse {
+        flex-direction: row-reverse;
+      }
+      .column.reverse {
+        flex-direction: column-reverse;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p style="margin: 0 40px; text-align: center">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum odio optio
+        laborum, facere placeat voluptate qui nemo est, quibusdam a officia
+        tenetur voluptas dicta, enim magni ipsum culpa. Nemo, fuga!
+      </p>
+
+      <div style="text-align: center">
+        <img src="image.png" alt="우주고양" />
+      </div>
+
+      <div>
+        <img
+          style="display: block; margin: 0 auto"
+          src="image.png"
+          alt="우주고양"
+        />
+      </div>
+    </div>
+
+    <div class="flex-container">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+      <div class="flex-item">4</div>
+    </div>
+
+    <div class="flex-container row">
+      <div class="flex-item">R</div>
+      <div class="flex-item">o</div>
+      <div class="flex-item">w</div>
+    </div>
+
+    <div class="flex-container row reverse">
+      <div class="flex-item">Row</div>
+      <div class="flex-item">rev</div>
+      <div class="flex-item">ers</div>
+      <div class="flex-item">e</div>
+    </div>
+
+    <div class="flex-container column">
+      <div class="flex-item">Col</div>
+      <div class="flex-item">umn</div>
+    </div>
+
+    <div class="flex-container column reverse">
+      <div class="flex-item">Col</div>
+      <div class="flex-item">umn</div>
+      <div class="flex-item">rev</div>
+      <div class="flex-item">ers</div>
+      <div class="flex-item">e</div>
+    </div>
+
+    <div
+      class="flex-container"
+      style="
+        height: 500px;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 5px;
+      "
+    >
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+      <div class="flex-item">4</div>
+      <div class="flex-item">5</div>
+      <div class="flex-item">6</div>
+      <div class="flex-item">7</div>
+      <div class="flex-item">8</div>
+      <div class="flex-item">9</div>
+    </div>
+
+    <div
+      style="
+        display: flex;
+        height: 200px;
+        background-color: #459234;
+        align-items: center;
+        flex-direction: column;
+        /* flex-direction  default value == row?! */
+      "
+    >
+      <div style="background-color: bisque">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ullam
+        repellat distinctio animi, quod beatae commodi vitae, voluptate qui a,
+        culpa omnis maxime corrupti aut impedit saepe assumenda. Facere, non!
+      </div>
+      <div style="background-color: gray">ㅎㅎ</div>
+    </div>
+  </body>
+</html>
+
+<!-- FLEX ? 정렬? 배치? -->
+<!-- GTD? PARA? -->
+<!-- position, ... 여러 정렬 관련... -->
+<!-- 1. 가로는 ㄱㅊ, 세로축에 대한 정렬이 어려움 -->
+<!-- 2. 하위 요소 간의 관계에 대한 정의 어려움 -->
+<!-- 컨테이너와 아이템 -->
+<!-- ui 비율 변화에 반응 , flexable -->
+
+<!-- main 축 정렬, 교차축 정렬, 줄바꿈 -->
+<!-- flex-wrap 화면 크기를 초과하는 item들을 내림 -->
+<!-- main axis -->
+
+<!-- bullet point로 nutshell하게 알려줘
+2. 가능한 상세하게 예제코드와 알려줘
+3. 역사적, 기술적 배경을 포함해서 비전공자/초보자도 알기 쉽게 단계별로 알려줘
+예) css3의 flex(flexbox)에 대해서 ~
+ -->

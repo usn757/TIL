@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Bakery</title>
+
+    <!-- OG 태그 추가 위치 -->
+    <meta property="og:title" content="Home Bakery - Homemade desserts" />
+    <meta
+      property="og:description"
+      content="집에서 쉽게 만들 수 있는 다양한 디저트를 만나보세요."
+    />
+    <meta property="og:image" content="your-og-image-url.jpg" />
+    <meta property="og:url" content="your-website-url.com" />
+
+    <!-- Favicon 추가 위치 -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- Bootstrap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- 웹폰트 추가 위치 (예: 구글 폰트) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* 기본 색상 설정 */
+      :root {
+        --primary-color: #101820;
+        --secondary-color: #f2aa4c;
+      }
+
+      .mb-4 {
+        /* font-family:  */
+        color: #8b0000;
+        font-family: "Playfair Display", serif;
+        font-optical-sizing: auto;
+        font-style: italic;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5dc;
+        color: var(--primary-color);
+      }
+
+      .container {
+        padding-top: 50px;
+      }
+
+      .card {
+        background-color: white;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .card-body {
+        padding: 20px;
+      }
+
+      .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .btn-primary {
+        background-color: var(--secondary-color);
+        border-color: var(--secondary-color);
+      }
+
+      .btn-primary:hover {
+        background-color: #e0893c;
+        border-color: #e0893c;
+      }
+
+      .modal-content {
+        background-color: #fff;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mb-4 title">Home Bakery - Homemade desserts</h1>
+
+      <!-- 캐러셀 컴포넌트 -->
+      <div
+        id="dessertCarousel"
+        class="carousel slide my-5"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="chocoBs.jpg" class="d-block w-100" alt="디저트1" />
+          </div>
+          <div class="carousel-item">
+            <img src="bananamuffin.png" class="d-block w-100" alt="디저트2" />
+          </div>
+          <div class="carousel-item">
+            <img src="lemoncakes.jpg" class="d-block w-100" alt="디저트3" />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#dessertCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">이전</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#dessertCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">다음</span>
+        </button>
+      </div>
+
+      <!-- 카드 컴포넌트 -->
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="card">
+            <img src="chocoBs.jpg" class="card-img-top" alt="디저트1" />
+            <div class="card-body">
+              <h5 class="card-title">초콜릿 브라우니</h5>
+              <p class="card-text">
+                진한 초콜릿의 맛이 일품인 브라우니입니다. 집에서 간편하게 만들
+                수 있습니다.
+              </p>
+              <a
+                href="#"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#recipeModal1"
+                >레시피 보기</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="card">
+            <img src="bananamuffin.png" class="card-img-top" alt="디저트2" />
+            <div class="card-body">
+              <h5 class="card-title">바나나 머핀</h5>
+              <p class="card-text">
+                달콤한 바나나의 풍미를 즐길 수 있는 머핀입니다. 아이들과 함께
+                만들기에 좋아요.
+              </p>
+              <a
+                href="#"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#recipeModal2"
+                >레시피 보기</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="card">
+            <img src="lemoncakes.jpg" class="card-img-top" alt="디저트3" />
+            <div class="card-body">
+              <h5 class="card-title">레몬 케이크</h5>
+              <p class="card-text">
+                상큼한 레몬의 맛을 가득 담은 케이크로, 가족과 함께 즐기기에
+                좋습니다.
+              </p>
+              <a
+                href="#"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#recipeModal3"
+                >레시피 보기</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 모달 컴포넌트 - 레시피 보기 -->
+    <div
+      class="modal fade"
+      id="recipeModal1"
+      tabindex="-1"
+      aria-labelledby="recipeModalLabel1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="recipeModalLabel1">
+              초콜릿 브라우니 레시피
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- 레시피 내용 입력 -->
+            <p>초콜릿 브라우니 만드는 방법...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="recipeModal2"
+      tabindex="-1"
+      aria-labelledby="recipeModalLabel2"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="recipeModalLabel2">
+              바나나 머핀 레시피
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- 레시피 내용 입력 -->
+            <p>바나나 머핀 만드는 방법...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="recipeModal3"
+      tabindex="-1"
+      aria-labelledby="recipeModalLabel3"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="recipeModalLabel3">
+              레몬 케이크 레시피
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- 레시피 내용 입력 -->
+            <p>레몬 케이크 만드는 방법...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+
+<!-- 웹폰트 및 기타 리소스: <웹폰트 추가 위치>와 같은 주석 위치에 웹폰트 추가 링크를 넣을 수 있습니다. -->
+<!-- OG 태그 및 favicon: 관련 메타 태그는 <OG 태그 추가 위치> 및 <Favicon 추가 위치> 주석으로 표시되어 있습니다. -->
+<!-- 디자인 및 색상: 전체적으로 #101820와 #F2AA4C 색상을 사용하여 스타일을 설정했습니다. -->
+<!-- 컴포넌트: 카드, 캐러셀, 모달을 사용하여 디저트 소개 및 레시피를 제공할 수 있습니다. -->
+<!-- 추가적인 스타일이나 동작을 원하시면, CSS나 JavaScript를 더 포함할 수 있습니다. -->
